@@ -3,7 +3,7 @@ CaSa team - CERN THE Port hackathon
 
 Participants:
 
-Chen Ye
+Chen Ye <chen_ye@brown.edu>
 
 Emily Primack <emilyprimack@gmail.com>
 
@@ -11,9 +11,9 @@ Fabricio Pontes Harsich <fabriph@gmail.com>
 
 Gianluca Valentino <gianluca.valentino@cern.ch>
 
-Megan Passey
+Megan Passey <megan.passey@impact-initiatives.org>
 
-Mohammad Jabbar
+Mohammad Abdul Jabbar <erif.astro@gmail.com>
 
 Vladimir Ilievski <ilievski.vladimir@live.com>
 
@@ -24,7 +24,7 @@ Cobi Smith <Cobi.SMITH@unitar.org>
 
 Kathryn Grimm <kathryn.grimm@cern.ch>
 
-Lars Bromley
+Lars Bromley <Lars.BROMLEY@unitar.org>
 
 Lillian Smestad <lillian.smestad@fys.uio.no>
 
