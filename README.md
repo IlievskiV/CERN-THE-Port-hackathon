@@ -1,3 +1,5 @@
+This is a space for open code and content emerging from CaSa team, [part of THE Port hackathon](http://theport.ch/Team_2014.html#Pier19), at CERN in November 2014. 
+
 CaSa team - CERN THE Port hackathon
 =======================
 
