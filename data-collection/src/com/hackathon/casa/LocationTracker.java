@@ -1,12 +1,12 @@
 package com.hackathon.casa;
 
-import com.hackathon.casa.exceptions.GPSNotEnabledException;
-
 import android.content.Context;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+
+import com.hackathon.casa.exceptions.GPSNotEnabledException;
 
 public class LocationTracker {
 
@@ -15,8 +15,9 @@ public class LocationTracker {
 
 	private LocationManager locationManager;
 	private final LocationListener locationListener;
-	protected double longitude;
-	protected double latitude;
+	private double longitude = 0;
+	private double latitude = 0;
+	private boolean isReady = false;
 
 	public LocationTracker(Context context) throws GPSNotEnabledException {
 		locationManager = (LocationManager) context
@@ -29,6 +30,9 @@ public class LocationTracker {
 			public void onLocationChanged(Location location) {
 				longitude = location.getLongitude();
 				latitude = location.getLatitude();
+				if (!isReady) {
+					isReady = true;
+				}
 			}
 
 			@Override
@@ -52,4 +56,15 @@ public class LocationTracker {
 		locationManager.removeUpdates(locationListener);
 	}
 
+	public double getLongitude() {
+		return longitude;
+	}
+
+	public double getLatitude() {
+		return latitude;
+	}
+
+	public boolean isReady() {
+		return isReady;
+	}
 }
