@@ -21,7 +21,7 @@
     </TextView>
 
     <TextView
-        android:id="@+id/latitud"
+        android:id="@+id/latitude"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" >
     </TextView>
@@ -33,7 +33,7 @@
     </TextView>
 
     <TextView
-        android:id="@+id/longitud"
+        android:id="@+id/longitude"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" >
     </TextView>
@@ -45,7 +45,7 @@
     </TextView>
 
     <TextView
-        android:id="@+id/altitud"
+        android:id="@+id/altitude"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" >
     </TextView>

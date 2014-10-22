@@ -16,12 +16,12 @@ public class MainActivity extends Activity {
 	private static final String APP_TAG = "com.hackathon.casa.measure";
 
 	private LocationTracker locationTracker;
-	private AltitudTracker altitudTracker;
+	private AltitudeTracker altitudTracker;
 	private Timer timer;
 
-	private TextView longitudView;
-	private TextView latitudView;
-	private TextView altitudView;
+	private TextView longitudeView;
+	private TextView latitudeView;
+	private TextView altitudeView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +32,11 @@ public class MainActivity extends Activity {
 		} catch (GPSNotEnabledException e) {
 			// TODO(fabriph): fall back showing that GPS is not enabled
 		}
-		altitudTracker = new AltitudTracker(this);
+		altitudTracker = new AltitudeTracker(this);
 
-		longitudView = (TextView) findViewById(R.id.longitud);
-		latitudView = (TextView) findViewById(R.id.latitud);
-		altitudView = (TextView) findViewById(R.id.altitud);
+		longitudeView = (TextView) findViewById(R.id.longitude);
+		latitudeView = (TextView) findViewById(R.id.latitude);
+		altitudeView = (TextView) findViewById(R.id.altitude);
 
 		// Wait until sensors are ready, then start measuring.
 		new Thread() {
@@ -87,11 +87,11 @@ public class MainActivity extends Activity {
 		sb.append(" Lon:");
 		sb.append(locationTracker.getLongitude());
 		sb.append(" Alt:");
-		sb.append(altitudTracker.getAltitud());
+		sb.append(altitudTracker.getAltitude());
 		Log.d(APP_TAG, sb.toString());
-		longitudView.setText(String.valueOf(locationTracker.getLatitude()));
-		latitudView.setText(String.valueOf(locationTracker.getLongitude()));
-		altitudView.setText(String.valueOf(altitudTracker.getAltitud()));
+		longitudeView.setText(String.valueOf(locationTracker.getLatitude()));
+		latitudeView.setText(String.valueOf(locationTracker.getLongitude()));
+		altitudeView.setText(String.valueOf(altitudTracker.getAltitude()));
 	}
 
 }

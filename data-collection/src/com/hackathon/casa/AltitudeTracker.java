@@ -7,7 +7,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
-public class AltitudTracker {
+public class AltitudeTracker {
 
 	private static final double Rc = 8.31432; // Universal Gas Constant.
 	private static final double g = 9.80665; // Gravitational Acceleration.
@@ -20,7 +20,7 @@ public class AltitudTracker {
 	private double actualPressure;
 	private boolean isReady = false;
 
-	public AltitudTracker(Context context) {
+	public AltitudeTracker(Context context) {
 		sensorEventListener = new SensorEventListener() {
 
 			@Override
@@ -81,7 +81,7 @@ public class AltitudTracker {
 
 	// TODO(fabriph): check if initial temperature is not required to get a
 	// better estimation given that temperature may vary.
-	public double getAltitud() {
+	public double getAltitude() {
 		return (-((Rc * actualTemperature) / (M * g)) * Math.log(actualPressure
 				/ initialPressure));
 	}
